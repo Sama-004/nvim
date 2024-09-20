@@ -19,6 +19,8 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("nvim-treesitter/playground")
 	use("lukas-reineke/indent-blankline.nvim")
+	use("windwp/nvim-ts-autotag")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("stevearc/conform.nvim")
 	use("numToStr/Comment.nvim")
 	use("mbbill/undotree")
@@ -43,12 +45,13 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional
-		},
-	})
+	-- use({
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	requires = {
+	-- 		"nvim-tree/nvim-web-devicons", -- optional
+	-- 	},
+	-- })
+	use("stevearc/oil.nvim")
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",

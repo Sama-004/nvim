@@ -3,9 +3,14 @@ vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<Leader>ps", builtin.live_grep, {})
 vim.keymap.set("n", "<Leader>s", function()
-	builtin.current_buffer_fuzzy_find(
-		require("telescope.themes").get_cursor({ winblend = 80, height = 0.9, width = 0.8 })
-	)
+	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_cursor({
+		winblend = 0,
+		layout_config = {
+			width = 0.5,
+			height = 10,
+		},
+		previewer = false,
+	}))
 end, {})
 vim.keymap.set("n", "<Leader>d", builtin.diagnostics, {})
 vim.keymap.set("n", "<Leader>cd", function()
