@@ -1,4 +1,4 @@
-vim.g.barbar_auto_setup = false -- disable auto-setup
+vim.g.barbar_auto_setup = true -- disable auto-setup
 
 require("barbar").setup({
 	-- WARN: do not copy everything below into your config!
@@ -63,7 +63,7 @@ require("barbar").setup({
 		separator = { left = "▎", right = "" },
 
 		-- If true, add an additional separator at the end of the buffer list
-		separator_at_end = true,
+		-- separator_at_end = true,
 
 		-- Configure the icons on the bufferline when modified or pinned.
 		-- Supports all the base icon options.
@@ -77,7 +77,6 @@ require("barbar").setup({
 		-- Supports all the base icon options, plus `modified` and `pinned`.
 		alternate = { filetype = { enabled = false } },
 		current = { buffer_index = true },
-		inactive = { button = "×" },
 		visible = { modified = { buffer_number = false } },
 	},
 
